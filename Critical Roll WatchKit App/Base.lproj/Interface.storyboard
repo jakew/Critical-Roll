@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C81f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RUI-FY-X4r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Critical Roll-->
+        <scene sceneID="rS2-LA-y2R">
+            <objects>
+                <controller title="Critical Roll" id="RUI-FY-X4r" customClass="InterfaceController" customModule="Critical_Roll_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="3er-Er-exr">
+                            <items>
+                                <tableRow identifier="DieTableRowController" id="YWF-Iw-1VT" customClass="DieTableRowController" customModule="Critical_Roll_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Z0C-9e-scs">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Die" id="R7n-zp-NwJ">
+                                                <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="28"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="ulF-DX-ynA" kind="push" identifier="showDieController" id="Rou-J0-bUb"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dieNameLabel" destination="R7n-zp-NwJ" id="EuK-CL-Vnl"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="dieTable" destination="3er-Er-exr" id="MlZ-xD-I8t"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="444" y="533"/>
+        </scene>
+        <!--Die Interface Controller-->
+        <scene sceneID="7Ao-td-an6">
+            <objects>
+                <controller id="ulF-DX-ynA" customClass="DieInterfaceController" customModule="Critical_Roll_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.70000000000000007" alignment="left" text="100" textAlignment="center" id="rRD-4Z-iP6" userLabel="Result Label">
+                            <fontDescription key="font" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="64"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Roll Die" id="MXG-8J-k2O" userLabel="Roll Button">
+                            <connections>
+                                <action selector="rollDie" destination="ulF-DX-ynA" id="2NY-Df-I14"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="resultLabel" destination="rRD-4Z-iP6" id="ceL-7q-hvD"/>
+                        <outlet property="rollButton" destination="MXG-8J-k2O" id="QaK-ud-KtW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="690" y="533"/>
+        </scene>
+    </scenes>
+</document>

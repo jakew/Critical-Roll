@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6746" systemVersion="14C81f" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PlayerCharacter" representedClassName="PlayerCharacter" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="rolls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Roll" inverseName="character" inverseEntity="Roll" syncable="YES"/>
+    </entity>
+    <entity name="Roll" representedClassName="Roll" syncable="YES">
+        <attribute name="d00" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="d4" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="d6" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="d8" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="d10" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="d12" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="d20" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="highlight" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="modifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="uuid" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="character" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerCharacter" inverseName="rolls" inverseEntity="PlayerCharacter" syncable="YES"/>
+    </entity>
+    <fetchRequest name="rollByUUID" entity="Roll" predicateString="uuid LIKE &quot;$ROLL_UUID&quot;" fetchLimit="1"/>
+    <elements>
+        <element name="PlayerCharacter" positionX="261" positionY="270" width="128" height="90"/>
+        <element name="Roll" positionX="261" positionY="198" width="128" height="225"/>
+    </elements>
+</model>

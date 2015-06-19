@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hEn-kd-LBo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="pY4-Hu-kfo">
+            <objects>
+                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-630"/>
+        </scene>
+        <!--Roll-->
+        <scene sceneID="yUG-lL-AsK">
+            <objects>
+                <viewController title="Roll" id="JEX-9P-axG" customClass="RollViewController" customModule="Critical_Roll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
+                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="16,200" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
+                                <rect key="frame" x="20" y="100" width="560" height="144"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-dt-K6L">
+                                <rect key="frame" x="253" y="252" width="94" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="0Lz-Zw-uRq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqO-2p-f8E">
+                                <rect key="frame" x="253" y="470" width="94" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="aUZ-KH-Chz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB7-kj-hgk">
+                                <rect key="frame" x="256" y="382" width="88" height="88"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="3su-1e-vHB"/>
+                                    <constraint firstAttribute="width" constant="88" id="kdo-jy-gkt"/>
+                                </constraints>
+                                <state key="normal" title="Roll"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="44"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="rollDie:" destination="JEX-9P-axG" eventType="touchUpInside" id="cmt-1L-4oW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tr-2J-ai0">
+                                <rect key="frame" x="279" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0tr-2J-ai0" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" symbolic="YES" id="6P8-4Q-Mom"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="0tr-2J-ai0" secondAttribute="bottom" constant="8" symbolic="YES" id="AJJ-Xi-gMU"/>
+                            <constraint firstAttribute="centerX" secondItem="0XM-y9-sOw" secondAttribute="centerX" id="KeO-i7-mkG"/>
+                            <constraint firstItem="VTo-dt-K6L" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="8" symbolic="YES" id="Rzy-dS-M5E"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="DqO-2p-f8E" secondAttribute="bottom" id="X2Y-ER-tJD"/>
+                            <constraint firstItem="DqO-2p-f8E" firstAttribute="top" secondItem="wB7-kj-hgk" secondAttribute="bottom" id="k95-JH-YWj"/>
+                            <constraint firstItem="VTo-dt-K6L" firstAttribute="height" secondItem="DqO-2p-f8E" secondAttribute="height" id="ltw-ys-K21"/>
+                            <constraint firstAttribute="centerX" secondItem="0tr-2J-ai0" secondAttribute="centerX" id="qfb-xj-87J"/>
+                            <constraint firstItem="wB7-kj-hgk" firstAttribute="top" secondItem="VTo-dt-K6L" secondAttribute="bottom" id="sbb-Wu-ND7"/>
+                            <constraint firstAttribute="centerX" secondItem="VTo-dt-K6L" secondAttribute="centerX" id="srh-DZ-4WX"/>
+                            <constraint firstAttribute="centerX" secondItem="wB7-kj-hgk" secondAttribute="centerX" id="swi-aB-BLB"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstAttribute="centerX" secondItem="DqO-2p-f8E" secondAttribute="centerX" id="y1u-WO-G2e"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Roll" id="mOI-FS-AaM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qTh-QJ-Z2k">
+                            <connections>
+                                <action selector="displayEditRollViewControllerModal:" destination="JEX-9P-axG" id="9lI-zh-rhX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rollNameLabel" destination="0tr-2J-ai0" id="lKn-Gc-Yw6"/>
+                        <outlet property="rollTotalLabel" destination="0XM-y9-sOw" id="BLQ-Ic-KWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521" y="129"/>
+        </scene>
+        <!--Dice-->
+        <scene sceneID="igk-8w-7mK">
+            <objects>
+                <collectionViewController title="Dice" id="hgl-Mn-ck9" customClass="DiceCollectionViewController" customModule="Critical_Roll" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uFw-8y-Jx4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="BxX-SZ-tfG">
+                            <size key="itemSize" width="120" height="214"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DieCell" id="Wdt-bR-m1g" customClass="DiceCollectionVieWCell" customModule="Critical_Roll" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="214"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blankD20" translatesAutoresizingMaskIntoConstraints="NO" id="XQq-eh-LjM" userLabel="Die Icon Image">
+                                            <rect key="frame" x="8" y="8" width="104" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="HuZ-24-WZ0"/>
+                                                <constraint firstAttribute="width" secondItem="XQq-eh-LjM" secondAttribute="height" id="oBP-8I-5vw"/>
+                                                <constraint firstAttribute="width" secondItem="XQq-eh-LjM" secondAttribute="height" multiplier="1:1" id="uvN-hY-iwx"/>
+                                            </constraints>
+                                            <attributedString key="userComments">
+                                                <fragment content="DieIcon">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="controlContent" size="11"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="HuZ-24-WZ0"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ce-sr-V8L" userLabel="Top Spacer">
+                                            <rect key="frame" x="57" y="112" width="5" height="37"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="5" id="9D5-vw-Is2"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="rZc-6H-6Rt" userLabel="Bottom Spacer">
+                                            <rect key="frame" x="59" y="169" width="2" height="37"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="OsN-Av-Wnp"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7o-mj-wlI" userLabel="Roll Value">
+                                            <rect key="frame" x="46" y="50" width="29" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9x-C7-xAY" userLabel="Roll Label">
+                                            <rect key="frame" x="45" y="149" width="30" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XQq-eh-LjM" firstAttribute="centerX" secondItem="O7o-mj-wlI" secondAttribute="centerX" id="8sn-Vs-Aj8"/>
+                                    <constraint firstItem="J9x-C7-xAY" firstAttribute="top" secondItem="8ce-sr-V8L" secondAttribute="bottom" priority="998" id="AYK-RO-6Oi"/>
+                                    <constraint firstItem="XQq-eh-LjM" firstAttribute="centerY" secondItem="O7o-mj-wlI" secondAttribute="centerY" id="DE1-Fo-rau"/>
+                                    <constraint firstItem="XQq-eh-LjM" firstAttribute="trailing" secondItem="Wdt-bR-m1g" secondAttribute="trailingMargin" id="GHE-yw-ChE"/>
+                                    <constraint firstItem="8ce-sr-V8L" firstAttribute="top" secondItem="XQq-eh-LjM" secondAttribute="bottom" id="JPe-w7-sgn"/>
+                                    <constraint firstItem="rZc-6H-6Rt" firstAttribute="centerX" secondItem="J9x-C7-xAY" secondAttribute="centerX" id="Jfw-NY-swt"/>
+                                    <constraint firstItem="8ce-sr-V8L" firstAttribute="height" secondItem="rZc-6H-6Rt" secondAttribute="height" id="Qmc-P6-pUS"/>
+                                    <constraint firstItem="XQq-eh-LjM" firstAttribute="top" secondItem="Wdt-bR-m1g" secondAttribute="topMargin" id="SnB-2r-6k0"/>
+                                    <constraint firstItem="rZc-6H-6Rt" firstAttribute="top" secondItem="J9x-C7-xAY" secondAttribute="bottom" id="Wo4-9B-cP2"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="rZc-6H-6Rt" secondAttribute="bottom" id="Xbc-tW-rlm"/>
+                                    <constraint firstItem="XQq-eh-LjM" firstAttribute="leading" secondItem="Wdt-bR-m1g" secondAttribute="leadingMargin" id="c0v-J7-EQz"/>
+                                    <constraint firstItem="XQq-eh-LjM" firstAttribute="centerX" secondItem="8ce-sr-V8L" secondAttribute="centerX" id="dm0-Gk-cGE"/>
+                                    <constraint firstItem="8ce-sr-V8L" firstAttribute="centerX" secondItem="J9x-C7-xAY" secondAttribute="centerX" id="mwd-0s-mFL"/>
+                                </constraints>
+                                <size key="customSize" width="120" height="214"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="contentView.layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dieIcon" destination="XQq-eh-LjM" id="jCU-Xj-egm"/>
+                                    <outlet property="rollLabel" destination="J9x-C7-xAY" id="O3M-HL-amh"/>
+                                    <outlet property="rollValue" destination="O7o-mj-wlI" id="LFE-md-ltS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hgl-Mn-ck9" id="kE0-ma-G68"/>
+                            <outlet property="delegate" destination="hgl-Mn-ck9" id="CNn-tO-8dj"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Single Die Rolls" id="QPT-vs-SXR"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQt-4K-flg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="332"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tJH-oY-xIe">
+            <objects>
+                <tabBarController id="hEn-kd-LBo" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fko-nM-axC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H1p-Uh-vWS" kind="relationship" relationship="viewControllers" id="Rqv-V9-71H"/>
+                        <segue destination="Fr2-yb-shK" kind="relationship" relationship="viewControllers" id="t36-5p-JLn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpO-R6-Gpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1676" y="1"/>
+        </scene>
+        <!--Custom Rolls-->
+        <scene sceneID="Nki-YV-4Qg">
+            <objects>
+                <splitViewController title="Custom Rolls" id="H1p-Uh-vWS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Custom Rolls" image="Rolls_Icon" id="6cs-ht-HI1"/>
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
+                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="-330"/>
+        </scene>
+        <!--Roll Table-->
+        <scene sceneID="smW-Zh-WAh">
+            <objects>
+                <tableViewController title="Roll Table" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="RollTableViewController" customModule="Critical_Roll" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" detailTextLabel="4No-or-sxP" style="IBUITableViewCellStyleSubtitle" id="WCw-Qf-5nD">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4No-or-sxP">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Fv3-V7-aNB"/>
+                            <outlet property="delegate" destination="7bK-jq-Zjz" id="epH-OB-Eb7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Roll List" id="Zdf-7t-Un8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-630"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r7l-gg-dq7">
+            <objects>
+                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="129"/>
+        </scene>
+        <!--Dice-->
+        <scene sceneID="Ep9-NH-UZW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fr2-yb-shK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dice" image="Die_Icon" id="ont-u9-N8Y"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VI9-E9-ID2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hgl-Mn-ck9" kind="relationship" relationship="rootViewController" id="Zt5-US-hpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEX-fe-ubh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="332"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Die_Icon" width="25" height="25"/>
+        <image name="Rolls_Icon" width="25" height="25"/>
+        <image name="blankD20" width="104" height="104"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6S0-TO-JiA"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.46808122660000001" blue="0.57588642150000002" alpha="1" colorSpace="calibratedRGB"/>
+</document>

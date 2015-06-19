@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Critical Roll WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Critical Roll-Today.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Critical Roll.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>RollKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>424FCE5C1A14A92500AFEF4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>424FCE761A14A92500AFEF4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4284BC4A1A5E169B00E8F75D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4284BCA91A5EAD8800E8F75D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4284BCB31A5EAD8800E8F75D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>42D36B371A635E9500FCD7B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>42D36B5A1A64125400FCD7B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
